@@ -1,0 +1,78 @@
+GET http://127.0.0.1:8000/ HTTP/1.1   #root route
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/post HTTP/1.1  #create post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzI3MzUwNTN9.uim8U4yO7p3vzPcCnPojCpPfjQEWiW34QiP7-zzKj9Q
+X-Algo: HS256
+Content-Type: application/json
+
+{
+  "title": "Post 1",
+  "content": "hello by me,.... priya!! ",
+  "published": true
+}
+ 
+
+
+###
+GET http://127.0.0.1:8000/post HTTP/1.1  #get all posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzI3MzQ4NDd9.mHXIdGEnf6dMKpACannE_mK0MZXZZ2-5mO4xsFfIZD
+X-Algo: HS256
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:8000/post/4 HTTP/1.1  #get post by id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI2NTA5NjR9.DQaMQhaD4L-bMnvNsW-FQTJ7kESpMiDJmcmjKQS4hpM
+X-Algo: HS256
+Content-Type: application/json
+
+###
+PUT http://127.0.0.1:8000/post/4 HTTP/1.1   #update post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI0MTI2MjN9.ip7SBz7xtxIZHmzCmj8iPaXNX_fC2bKnPBRAEc_ya-o
+X-Algo: HS256
+Content-Type: application/json
+
+{
+  "title": "My third Post",
+  "content": "This is the content of my third post.",
+  "published": true
+}
+
+###
+DELETE http://127.0.0.1:8000/post/4 HTTP/1.1   #delete route
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI0MTI2MjN9.ip7SBz7xtxIZHmzCmj8iPaXNX_fC2bKnPBRAEc_ya-o
+X-Algo: HS256
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/user HTTP/1.1  #create user
+Content-Type: application/json
+
+{
+  "email": "ttddii@gmail.com",
+  "password": "priya123"
+}
+
+###
+GET http://127.0.0.1:8000/user/1 HTTP/1.1   #get user by id
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/login HTTP/1.1   #login route
+Content-Type: application/x-www-form-urlencoded
+
+username=ttddii@gmail.com&password=priya123
+
+###
+POST http://127.0.0.1:8000/vote HTTP/1.1   #vote route
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI1NzgxNzV9.G3j7WB7yh2scMaJz4Zld617vz1KXMzNiQK4Q53EmD6k
+X-Algo: HS256
+Content-Type: application/json
+
+{
+  "post_id": 5,
+  "dir": 0
+}
+
+###
