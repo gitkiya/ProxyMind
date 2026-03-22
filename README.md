@@ -75,7 +75,6 @@ uvicorn app:app --reload
 
 ## 👤 Built by K_I_R_A_N
 
-- GitHub: [@gitkiya](https://github.com/gitkiya)
 - Twitter: [@Kiran426578](https://twitter.com/Kiran426578)
 ```
 
