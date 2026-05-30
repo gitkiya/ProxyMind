@@ -3,13 +3,13 @@ Content-Type: application/json
 
 ###
 POST http://127.0.0.1:8000/post HTTP/1.1  #create post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzI3MzUwNTN9.uim8U4yO7p3vzPcCnPojCpPfjQEWiW34QiP7-zzKj9Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzU4MTkzOTR9.1ImE6Z9rv3fM_W_4At7efN5FasZ9bdrA5ROP7Smr2g4
 X-Algo: HS256
 Content-Type: application/json
 
 {
-  "title": "Post 1",
-  "content": "hello by me,.... priya!! ",
+  "title": "Post 16",
+  "content": "hello world , hiii !!!",
   "published": true
 }
  
@@ -22,8 +22,8 @@ X-Algo: HS256
 Content-Type: application/json
 
 ###
-GET http://127.0.0.1:8000/post/4 HTTP/1.1  #get post by id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI2NTA5NjR9.DQaMQhaD4L-bMnvNsW-FQTJ7kESpMiDJmcmjKQS4hpM
+GET http://127.0.0.1:8000/post/1 HTTP/1.1  #get post by id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzM5NDMwMTV9.8mawmrO7s_pFIWntBJiRMB0gOGCNdxPWSE4qj3DoUko
 X-Algo: HS256
 Content-Type: application/json
 
@@ -40,8 +40,8 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://127.0.0.1:8000/post/4 HTTP/1.1   #delete route
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE3NzI0MTI2MjN9.ip7SBz7xtxIZHmzCmj8iPaXNX_fC2bKnPBRAEc_ya-o
+DELETE http://127.0.0.1:8000/post/9 HTTP/1.1   #delete route
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzU4MTkzOTR9.1ImE6Z9rv3fM_W_4At7efN5FasZ9bdrA5ROP7Smr2g4
 X-Algo: HS256
 Content-Type: application/json
 
