@@ -29,16 +29,12 @@ def retrieve_memories(query, user_id, top_n=3):
     cursor.close()
     conn.close()
 
-    print(f"\nTop {top_n} memories for: '{query}'\n")
-    for row in results:
-        print(f"memory   : {row[0]}")
-        print(f"type     : {row[1]}")
-        print(f"stored   : {row[2]}")
-        print(f"similarity: {round(row[3], 4)}")
-        print("---")
+    return results
+    
+        
 
-# test it
-retrieve_memories(
-    query="what am I building",
-    user_id="user_1"
-)
+# # test it
+# retrieve_memories(
+#     query="what am I building",
+#     user_id="user_1"
+# )

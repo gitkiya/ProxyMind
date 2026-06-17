@@ -127,6 +127,6 @@ def monthly_summarize(user_id):
     print(f"Monthly summary stored. Weekly and core memories compressed and deleted.")
     print(f"Summary: {summary}")
 
-# test weekly
-print("=== WEEKLY SUMMARIZER ===")
-weekly_summarize(user_id="user_1")
+# # test weekly
+# print("=== WEEKLY SUMMARIZER ===")
+# weekly_summarize(user_id="user_1")

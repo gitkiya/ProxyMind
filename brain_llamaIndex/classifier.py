@@ -40,17 +40,17 @@ Memory: "{content}"
     else:
         return "noise"  # default to noise if unclear
 
-# test it
-test_memories = [
-    "I am building an AI called ProxyMind that remembers users across 7 days",
-    "how's my progress?",
-    "I was really frustrated when pgvector wouldn't install",
-    "what time is it",
-    "I decided to use fixed weekly blocks instead of rolling window",
-    "haha yeah",
-]
+# # test it
+# test_memories = [
+#     "I am building an AI called ProxyMind that remembers users across 7 days",
+#     "how's my progress?",
+#     "I was really frustrated when pgvector wouldn't install",
+#     "what time is it",
+#     "I decided to use fixed weekly blocks instead of rolling window",
+#     "haha yeah",
+# ]
 
-print("Testing classifier...\n")
-for memory in test_memories:
-    result = classify_memory(memory)
-    print(f"{result.upper()} → {memory}")
+# print("Testing classifier...\n")
+# for memory in test_memories:
+#     result = classify_memory(memory)
+#     print(f"{result.upper()} → {memory}")
