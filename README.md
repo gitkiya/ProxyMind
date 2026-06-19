@@ -50,14 +50,12 @@ The core infrastructure is fully functional and production-ready. The backend is
 
 ## 🏗️ Roadmap
 
-| Phase | Status | Description |
-|-------|--------|-------------|
-| **Phase 1: Core Engine & Auth** | ✅ Complete | FastAPI, OAuth2, PostgreSQL, Alembic, REST APIs |
-| **Phase 2: LangGraph Orchestration** | 📋 Next | Agent workflow management, reasoning loop, LLM tool-calling |
-| **Phase 3: Memory Schema Expansion** | 📋 Planned | Semantic context capture, conversation threading, interaction patterns |
-| **Phase 4: Semantic Search Layer** | 📋 Planned | pgvector embeddings, semantic search across 7-day history |
-| **Phase 5: Agent Reasoning & Context** | 📋 Planned | Automatic context retrieval, intelligent responses, agent persistence |
-| **Phase 6: Monitoring & Analytics** | 📋 Planned | Performance metrics, conversation analytics, memory tracking |
+Phase 1 — Memory Layer     ✅ Complete
+Phase 2 — FastAPI + Auth   ✅ Already existed
+Phase 3 — LangGraph Agent  ← completed
+Phase 4 — Integration      ← here 
+Phase 5 — Frontend         ← July
+Phase 6 — Deploy           ← August 1
 
 ---
 
