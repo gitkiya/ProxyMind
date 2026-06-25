@@ -13,6 +13,12 @@ def store_memory(user_id, session_id, content):
     memory_type = classify_memory(content)
     print(f"Classified as: {memory_type.upper()}")
 
+    # noise → discard immediately, never store
+    if memory_type == "noise":
+        print(f"Noise discarded — not stored: {content}")
+        return
+
+    # core and uncertain → store
     embedding = model.encode(content).tolist()
 
     conn = connect_db()
@@ -30,9 +36,17 @@ def store_memory(user_id, session_id, content):
     conn.close()
     print(f"Memory stored as {memory_type.upper()}: {content}")
 
-# # test it
-# store_memory(
-#     user_id="user_1",
-#     session_id="session_1",
-#     content="I finished building the importance classifier today"
-# )
+# test it
+if __name__ == "__main__":
+    test_cases = [
+        "I finished integrating FastAPI with LangGraph today",
+        "what time is it",
+        "building something with Mani for YC application",
+        "okay sure",
+        "I was stressed about the July deadline but feeling better now",
+    ]
+
+    for content in test_cases:
+        print(f"\nInput: {content}")
+        store_memory("user_1", "session_test", content)
+        print("---")
