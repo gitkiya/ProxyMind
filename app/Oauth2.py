@@ -3,14 +3,14 @@ from datetime import datetime, timedelta
 from . import schema
 from fastapi import HTTPException, status , Depends
 from fastapi.security import OAuth2PasswordBearer
-from .config import setting
+from .config import settings
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 
-SECRET_KEY = setting.secret_key
-ALGORITHM = setting.algorithm
-ACCESS_TOKEN_EXPIRE_MINUTES = setting.access_token_expire_minutes
+SECRET_KEY = settings.secret_key
+ALGORITHM = settings.algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 
 
 def create_access_token(data: dict):
